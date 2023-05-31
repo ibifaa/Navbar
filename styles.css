@@ -4,24 +4,25 @@
 }
 
 body{
+    background-color: rgb(187, 166, 166);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 h1{
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 900;
     line-height: 50px;
 }
 
 main{
     width: 100%;
-    height: 500px;
+    height: 450px;
     background-color: rgb(187, 166, 166);
 }
 
 img{
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
 }
 
 .dot{
@@ -45,16 +46,25 @@ img{
 /* Helper Classes */
 .flex{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+ }
+
+.flex2{
+    display: flex;
+    justify-content: right;
+   
 }
 
 .padding{
-   padding-left:50px;
-   padding-right: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
-a, li{
+
+
+.links a, li{
     text-decoration: none;
     list-style: none;
     margin: 15px;
@@ -68,13 +78,63 @@ a, li{
 nav, footer{
     background-color: black;
     color:silver;
-    height:40px;
     padding: 10px;
 }
 
-.hide-links{
-    /* height: 0;
-    overflow: hidden; */
-    display: none;
+   .hide-links{
+    overflow: hidden;
+    display: inline-flex ;
+    
 }
 
+.links li:hover{
+    background-color:rgb(187, 166, 166) ;
+}
+
+
+
+@media screen and (max-width:800px) {
+   .hide-links{
+    height: 0;
+    overflow: hidden;
+    display: none;
+    
+}
+
+
+.links ul {
+    display: block;
+    width: 100%;
+}
+
+/* .button{
+    width: 50%;
+    align-items: left;
+} */
+
+.padding{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+nav, footer{
+    
+    padding: 2px;
+}
+.logo{
+    width: 50%;
+}
+
+}
+
+@media screen and (min-width:800px){
+    .button{
+        display: none;
+        height: 0;
+        overflow: hidden;
+    }
+
+
+
+}
